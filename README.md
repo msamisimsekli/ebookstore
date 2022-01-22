@@ -17,7 +17,7 @@ There are 4 controller
 4. StatisticsController - Able to get monthly order statistics for customer(s) 
 
 ### Technology Stack
-Spring Boot, H2, Docker
+Java 11, Maven, Spring Boot, H2, Docker
 
 ### How To Run
 
