@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "a41dbdef-7528-47a3-b009-5b839a1939f6",
+		"name": "EBookApplication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Save New Customer 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sami\",\r\n    \"email\": \"sami@email.com\",\r\n    \"address\": \"Yemen Road 15, Yemen\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/customer",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save New Customer 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Ahmet\",\r\n    \"email\": \"ahmet@email.com\",\r\n    \"address\": \"Yemen Road 16, Yemen\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/customer",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Customers With Paging",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8181/customer?pageIndex=0&pageSize=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"customer"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save New Book 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Book1\",\r\n    \"quantity\": \"5\",\r\n    \"price\": \"30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/book",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save New Book 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Book2\",\r\n    \"quantity\": \"6\",\r\n    \"price\": \"20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/book",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Books With Paging",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8181/book?pageIndex=0&pageSize=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"book"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Order 1 For Customer 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": \"1\",\r\n    \"bookOrders\": [\r\n        {\r\n            \"bookId\": 3,\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"bookId\": 4,\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/order/newOrder",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"order",
+						"newOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Order 2 For Customer 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": \"1\",\r\n    \"bookOrders\": [\r\n        {\r\n            \"bookId\": 3,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"bookId\": 4,\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/order/newOrder",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"order",
+						"newOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List All Orders Of Customer 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8181/order/getCustomerOrder?customerId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"order",
+						"getCustomerOrder"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8181/order/getOrder?orderId=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"order",
+						"getOrder"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Order 1 For Customer 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": \"2\",\r\n    \"bookOrders\": [\r\n        {\r\n            \"bookId\": 3,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"bookId\": 4,\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/order/newOrder",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"order",
+						"newOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Statistics For Customer 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8181/statistics/getCustomerStatistic?customerId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"statistics",
+						"getCustomerStatistic"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Statistics For All Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8181/statistics/getCustomerStatistic?customerId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"statistics",
+						"getCustomerStatistic"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
